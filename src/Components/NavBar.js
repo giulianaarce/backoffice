@@ -25,6 +25,7 @@ export default class NavBar extends React.Component {
                         <Link className="nav-link active">Logout</Link>
                     </li>
                 </ul>
+                    <button type="button" className="btn btn-outline-light">Light</button>
             </div>
 
         )
