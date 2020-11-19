@@ -16,7 +16,7 @@ export default class NavBar extends React.Component {
                         <Link className="nav-link" to="/productos">Productos</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/categorias">Categorias</Link>
+                        <Link className="nav-link active" to="/banner">Banner</Link>
                     </li>
                     <li>
                         <button type="submit" onClick={this.handlerButton} className="btn btn-outline-dark">Logout</button>
