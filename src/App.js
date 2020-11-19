@@ -46,7 +46,7 @@ export default class App extends React.Component {
       descuento: descuento,
       imgUrl: imgUrl
     }
-    fetch("http://localhost:4200/productos", {
+    fetch("http://localhost:4500/productos", {
       method: 'POST',
       body: JSON.stringify(newProduct),
       headers: { 'Content-Type': 'application/json' }
@@ -60,7 +60,7 @@ export default class App extends React.Component {
       texto: texto,
       imgUrl: imgUrl
     }
-    fetch("http://localhost:4200/banner", {
+    fetch("http://localhost:4500/banner", {
       method: 'POST',
       body: JSON.stringify(newBanner),
       headers: { 'Content-Type': 'application/json' }
@@ -70,7 +70,7 @@ export default class App extends React.Component {
 
   //Get
   getProductos = () => {
-    fetch("http://localhost:4200/productos")
+    fetch("http://localhost:4500/productos")
       .then((res) => { return res.json() })
       .then((json) => {
         console.log(json)
@@ -78,7 +78,7 @@ export default class App extends React.Component {
       })
   }
   getBanner = () => {
-    fetch("http://localhost:4200/banner")
+    fetch("http://localhost:4500/banner")
       .then((res) => { return res.json() })
       .then((banner) => {
         console.log(banner)
