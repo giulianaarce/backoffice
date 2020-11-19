@@ -1,0 +1,23 @@
+.App {
+  margin-left: 2em;
+  background-color: rgb(228, 174, 149);
+  font-size: 18px;
+  font-family: "Archivo Narrow",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.leaflet-container {
+  width: 60vw;
+  height: 60vh;
+  border:0;
+  
+ }
+ .contenedor-banner{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  
+  
+ }
