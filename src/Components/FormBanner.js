@@ -25,14 +25,14 @@ export default class FormBanner extends React.Component {
             <div style={{paddingBottom:20, fontSize:20}}>
             <Link to="/banner">Volver</Link>
             </div>
-            <form>
+            <form className="container-form">
                 <div classname="form-group">
                     <label htmlFor="exampleInputEmail1">Url de imagen</label><br/>
-                    <input type="text" onChange={this.handlerUrl} classname="form-control" /><br/>
+                    <input type="text"className="form-control" onChange={this.handlerUrl} classname="form-control" /><br/>
                 </div>
                 <div classname="form-group">
                     <label htmlFor="exampleInputEmail1">Texto de imagen</label><br/>
-                    <input type="text" onChange={this.handlerTexto} classname="form-control" /><br/>
+                    <input type="text"className="form-control" onChange={this.handlerTexto} classname="form-control" /><br/>
                 </div>
                 <button type="submit" onClick={this.handlderAgregar} className="btn btn-primary">Agregar</button>
             </form>

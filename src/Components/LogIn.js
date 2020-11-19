@@ -21,6 +21,8 @@ export default class LogIn extends React.Component {
     }
     render() {
         return (
+            <div className="container-login">
+            <h1 className="container-title">La Veloz</h1>
             <form>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Usuario</label>
@@ -32,7 +34,7 @@ export default class LogIn extends React.Component {
                 </div>
                 <button type="submit" onClick={this.handlerSubmit} className="btn btn-primary">Submit</button>
             </form>
-
+            </div>
         )
     }
 }

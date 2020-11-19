@@ -21,10 +21,14 @@ export default class App extends React.Component {
     super()
     this.state = {
       productos: "",
-      banner: ""
+      banner: "",
+      login: false,
+      auth:""
     }
   }
   componentDidMount() {
+    localStorage.setItem("password",12345)
+    localStorage.setItem("login", false)
     this.getProductos()
     this.getBanner()
   }
@@ -87,6 +91,10 @@ export default class App extends React.Component {
       password: password
     }
     console.log(log)
+    if(log.password == localStorage.getItem("password")){
+      return localStorage.setItem("token","sarasa")
+    }
+    /*
     fetch("http://localhost:4200/login",{
       method:'POST',
       body: JSON.stringify(log),
@@ -95,25 +103,44 @@ export default class App extends React.Component {
     .then(json=>{
       console.log(json)
       localStorage.setItem(json)
-    })
+    })*/
   }
+
+  logout = (valor)=>{
+    const click = valor
+    console.log("desde app", click)
+    localStorage.removeItem("token")
+    
+  }
+  
+
   render() {
-    return (
-      <>
-        <Router>
-          <NavBar />
-          <Switch>
-            <Route path="/login"><LogIn login={this.login}/></Route>
-            <Route path="/productos"><Productos productos={this.state.productos || []} /></Route>
-            <Route path="/agregarproducto"><FormProduct nuevoProducto={this.nuevoProducto} /></Route>
-            <Route path="/categorias"><Categorias /></Route>
-            <Route path="/banner"><Banner banners={this.state.banner || []} /></Route>
-            <Route path="/nuevo-banner"><FormBanner nuevoBanner={this.nuevoBanner}/></Route>
-            <Route path="*"><Redirect to="/login"></Redirect></Route>
-          </Switch>
-        </Router>
-      </>
-    )
+    if(localStorage.getItem("token")==undefined){
+     return (
+       <Router>
+         <Switch>
+          <Route path="/login"><LogIn login={this.login}/></Route>
+          <Route path="*"><Redirect to="login"/></Route>
+         </Switch>
+       </Router>
+     )
+    }else{
+      return (          
+          <Router>
+            <NavBar logout={this.logout}/>
+            <Switch>
+              <Route path="/productos"><Productos productos={this.state.productos || []} /></Route>
+              <Route path="/agregarproducto"><FormProduct nuevoProducto={this.nuevoProducto} /></Route>
+              <Route path="/categorias"><Categorias /></Route>
+              <Route path="/banner"><Banner banners={this.state.banner || []} /></Route>
+              <Route path="/nuevo-banner"><FormBanner nuevoBanner={this.nuevoBanner}/></Route>
+              <Route path="*"><Redirect to="/productos"></Redirect></Route>
+            </Switch>
+          </Router>
+        
+      )
+
+    }
   }
 }
 

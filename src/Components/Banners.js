@@ -16,6 +16,7 @@ export default class Banner extends React.Component {
                                 <img src={banner.imgUrl} className="card-img-top" />
                                 <div className="card-body">
                                     <p className="card-text">{banner.texto}</p>
+                                    <a href="#" className="btn btn-primary" color="success">Editar</a>
                                 </div>
                             </div>
                     )

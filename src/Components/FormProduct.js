@@ -55,53 +55,53 @@ export default class FormProduct extends React.Component {
         return (
             <>
                 <Link to="/productos">Volver</Link>
-                <form>
+                <form className="container-form">
                     <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Producto</label>
-                        <input type="text" onChange={this.handlderProducto}classname="form-control" />
+                        <label htmlFor="exampleInputEmail1">Producto</label><br/>
+                        <input type="text" className="form-control" onChange={this.handlderProducto}classname="form-control" /><br/>
                     </div>
                     <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Categoria</label>
-                        <input type="text" onChange={this.handlderCategoria}classname="form-control" />
+                        <label htmlFor="exampleInputEmail1">Categoria</label><br/>
+                        <input type="text" className="form-control" onChange={this.handlderCategoria}classname="form-control" /><br/>
 
                     </div>
                     <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Codigo</label>
-                        <input type="text" onChange={this.handlderCodigo}classname="form-control" />
+                        <label htmlFor="exampleInputEmail1">Codigo</label><br/>
+                        <input type="text" className="form-control" onChange={this.handlderCodigo}classname="form-control" /><br/>
 
                     </div>
                     <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Descripcion</label>
-                        <input type="text" onChange={this.handlderDescripcion}classname="form-control" />
+                        <label htmlFor="exampleInputEmail1">Dimension</label><br/>
+                        <input type="text" className="form-control" onChange={this.handlderDimension}classname="form-control" /><br/>
 
                     </div>
                     <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Marketing</label>
-                        <input type="text" onChange={this.handlderMarketing}classname="form-control" />
+                        <label htmlFor="exampleInputEmail1">Color</label><br/>
+                        <input type="text" className="form-control" onChange={this.handlderColor}classname="form-control" /><br/>
 
                     </div>
                     <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Dimension</label>
-                        <input type="text" onChange={this.handlderDimension}classname="form-control" />
+                        <label htmlFor="exampleInputEmail1">Precio</label><br/>
+                        <input type="text" className="form-control" onChange={this.handlderPrecio}classname="form-control" /><br/>
 
                     </div>
                     <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Color</label>
-                        <input type="text" onChange={this.handlderColor}classname="form-control" />
+                        <label htmlFor="exampleInputEmail1">Descuento</label><br/>
+                        <input type="text" className="form-control" onChange={this.handlderDescuento}classname="form-control" /><br/>
+                    </div>
+                    <div classname="form-group">
+                        <label htmlFor="exampleInputEmail1">Link Imagen</label><br/>
+                        <input type="text" className="form-control" onChange={this.handlerImagen}classname="form-control" /><br/>
+                    </div>
+                    <div classname="form-group">
+                        <label htmlFor="exampleInputEmail1">Descripcion</label><br/>
+                        <textarea type="text" className="form-control" onChange={this.handlderDescripcion}classname="form-control" /><br/>
 
                     </div>
                     <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Precio</label>
-                        <input type="text" onChange={this.handlderPrecio}classname="form-control" />
+                        <label htmlFor="exampleInputEmail1">Marketing</label><br/>
+                        <textarea type="text" className="form-control" onChange={this.handlderMarketing}classname="form-control" /><br/>
 
-                    </div>
-                    <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Descuento</label>
-                        <input type="text" onChange={this.handlderDescuento}classname="form-control" />
-                    </div>
-                    <div classname="form-group">
-                        <label htmlFor="exampleInputEmail1">Imagen</label>
-                        <input type="text" onChange={this.handlerImagen}classname="form-control" />
                     </div>
                     <button type="submit" onClick={this.handlderAgregar} className="btn btn-primary">Agregar</button>
                 </form>

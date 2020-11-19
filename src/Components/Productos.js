@@ -13,7 +13,19 @@ export default class Productos extends React.Component {
                 <div className="contenedor-productos">
                 {this.props.productos.map((producto)=>{
                     return(
-                    <li className="list-group-item">{producto.producto}/{producto.categoria}/{producto.precio}</li>
+                        <div className="card" style={{width: '18rem'}}>
+                        <img src={producto.imgUrl} className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">{producto.title}</h5>
+                            <p className="card-text">
+                                {producto.descripcion}.{producto.marketing}<br/>
+                                Colores:{producto.color}<br/>
+                                Dimensiones:{producto.dimension}<br/>
+                                <strong>${producto.precio}</strong>
+                            </p>
+                            <a href="#" className="btn btn-primary" color="success">Editar</a>
+                        </div>
+                    </div>
                     )
                 })}
                 </div>
