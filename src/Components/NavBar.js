@@ -18,8 +18,11 @@ export default class NavBar extends React.Component {
                     <li className="nav-item">
                         <Link className="nav-link active" to="/banner">Banner</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link active" to="/categorias">Categorias</Link>
+                    </li>
                     <li>
-                        <button type="submit" onClick={this.handlerButton} className="btn btn-outline-dark">Logout</button>
+                        <button type="button" onClick={this.handlerButton} value="false" className="btn btn-outline-dark">Logout</button>
                     </li>
                 </ul>
             </div>

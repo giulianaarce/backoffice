@@ -23,17 +23,17 @@ export default class LogIn extends React.Component {
         return (
             <div className="container-login">
             <h1 className="container-title">La Veloz</h1>
-            <form>
+            <div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Usuario</label>
                     <input type="text" onChange={this.handlerUser} className="form-control"  />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputPassword1">Contraseña</label>
-                    <input type="text" onChange={this.handlerPass} className="form-control"/>
+                    <input type="password" onChange={this.handlerPass} className="form-control"/>
                 </div>
-                <button type="submit" onClick={this.handlerSubmit} className="btn btn-primary">Submit</button>
-            </form>
+                <button type="button" onClick={this.handlerSubmit} className="btn btn-primary">Submit</button>
+            </div>
             </div>
         )
     }
