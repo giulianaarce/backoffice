@@ -29,14 +29,14 @@ export default class Categorias extends React.Component {
                     <Link to="/nueva-categoria">Agregar Categoria</Link>
                 </div>
                 <div>
-                    <input type="text" onChange={this.handleSearch} />
-                    <button onClick={this.handleButton}>Buscar</button>
+                    <input className="form-control" type="text" onChange={this.handleSearch} />
+                    <button className="btn btn-light" onClick={this.handleButton}>Buscar</button>
                 </div>
                 <ul className="list-group">
                 {this.props.categorias.map((categoria)=>{
                   return  (
                   <div>
-                      <li className="list-group-item">{categoria.categoria} <Link to="/updateCategoria"><button value={categoria._id} onClick={this.handleEditar}>Editar</button></Link></li>
+                      <li className="list-group-item">{categoria.categoria} <Link to="/updateCategoria"><button className="btn btn-success" value={categoria._id} onClick={this.handleEditar}>Editar</button></Link></li>
                         
                   </div>
                   

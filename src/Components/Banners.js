@@ -31,8 +31,8 @@ export default class Banner extends React.Component {
                     <Link to="/nuevo-banner">Agregar Banner</Link>
                 </div>
                 <div>
-                    <input type="text" onChange={this.handleSearch} />
-                    <button onClick={this.handleButton}>Buscar</button>
+                    <input className="form-control" type="text" onChange={this.handleSearch} />
+                    <button className="btn btn-light" onClick={this.handleButton}>Buscar</button>
                 </div>
                 <ul>
                     <div className="contenedor-banner">
@@ -42,7 +42,7 @@ export default class Banner extends React.Component {
                                     <img src={banner.imgUrl} className="card-img-top" />
                                     <div className="card-body">
                                         <p className="card-text">{banner.texto}</p>
-                                        <Link to="/updateBanner"><button value={banner._id} onClick={this.handleEditar}>Editar</button></Link>
+                                        <Link to="/updateBanner"><button className="btn btn-success" value={banner._id} onClick={this.handleEditar}>Editar</button></Link>
                                     </div>
                                 </div>
                             )

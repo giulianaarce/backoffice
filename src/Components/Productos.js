@@ -29,8 +29,8 @@ handleEditar = (e)=>{
                 <Link to="/agregarproducto">Nuevo Producto</Link>
                 </div>
                 <div>
-                    <input type="text" onChange={this.handleSearch}/>
-                    <button onClick={this.handleButton}>Buscar</button>
+                    <input className="form-control" type="text" onChange={this.handleSearch}/>
+                    <button className="btn btn-light" onClick={this.handleButton}>Buscar</button>
                 </div>
                 <ul className="list-group">
                 <div className="contenedor-productos">
@@ -46,7 +46,7 @@ handleEditar = (e)=>{
                                 Dimensiones:{producto.dimension}<br/>
                                 <strong>${producto.precio}</strong>
                             </p>
-                            <Link to="/update"><button value={producto._id} onClick={this.handleEditar}>Editar</button></Link>
+                            <Link to="/update"><button className="btn btn-success" value={producto._id} onClick={this.handleEditar}>Editar</button></Link>
                         </div>
                     </div>
                     )
